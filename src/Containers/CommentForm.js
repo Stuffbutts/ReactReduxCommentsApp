@@ -19,7 +19,8 @@ let CommentForm = ({ dispatch }) => {
                     if(!textarea.value.trim()){
                         return;
                     }
-                    dispatch(addComment(textarea.value, Date.now()));
+                    let d = Date.now();
+                    dispatch(addComment(textarea.value, d));
                     textarea.value = '';
                 }}
             >

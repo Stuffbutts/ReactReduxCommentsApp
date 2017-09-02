@@ -5,11 +5,15 @@ const storyStyle = {
     marginLeft: "auto",
     marginRight: "auto",
     textAlign: "center",
-    minHeight: "400px"
+    minHeight: "400px",
+    maxWidth: "70em"
 };
 
 const Story = ({ text }) => (
-  <p style={storyStyle}>{text}</p>
+  <div style={storyStyle}>
+      <h2>A story for you!</h2>
+      <span dangerouslySetInnerHTML={{__html: text}} />
+  </div>
 );
 
 export default Story

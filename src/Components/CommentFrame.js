@@ -7,7 +7,7 @@ const CommentFrameStyle = {
     display: "block",
     marginLeft: "auto",
     marginRight: "auto",
-    maxWidth: "400px"
+    maxWidth: "40rem"
 };
 
 const CommentFrame = () => (

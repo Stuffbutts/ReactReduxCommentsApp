@@ -8,32 +8,13 @@ import {
 
 
 const initialState = {
-  stories: [
-    {
-      id: 0,
-      dateTimeIndex: Date.now(),
+  story: {
+      dateTimeIndex: 0,
       isFetching: false,
-      text: `
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quo tandem modo? Id enim natura desiderat. <code>Duo Reges: constructio interrete.</code> Erat enim Polemonis. </p>
-
-        <p>Fortemne possumus dicere eundem illum Torquatum? Immo videri fortasse. </p>
-
-        <pre>
-        Eorum erat iste mos qui tum sophistae nominabantur, quorum e
-        numero primus est ausus Leontinus Gorgias in conventu
-        poscere quaestionem, id est iubere dicere, qua de re quis
-        vellet audire.
-
-        Deinde disputat, quod cuiusque generis animantium statui
-        deceat extremum.
-        </pre>
-
-
-        <p>Quid autem habent admirationis, cum prope accesseris? Ut pulsi recurrant? </p>
-      `,
-      source: "https://loripsum.net/api/3/short/link/code"
+      text: "",
+      source: ""
     }
-  ],
+  ,
   comments: [
     {
       id: 0,
@@ -67,7 +48,7 @@ function comments(state = initialState.comments, action){
   }
 }
 
-function stories(
+function story(
   state = {
     isFetching: false,
     text: '',
@@ -80,13 +61,13 @@ function stories(
       return Object.assign({}, state, {
         isFetching: true,
         source: action.source
-      })
+      });
     case RECEIVE_STORY:
       return Object.assign({}, state, {
         isFetching: false,
         text: action.text,
         dateTimeIndex: action.dateTimeIndex
-      })
+      });
     default:
       return state
   }
@@ -99,7 +80,7 @@ function stories(
 
 const commentAppReducer = combineReducers({
   comments,
-  stories
-})
+  story
+});
 
 export default commentAppReducer

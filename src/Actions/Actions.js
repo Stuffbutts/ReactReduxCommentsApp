@@ -22,20 +22,22 @@ export function requestStory (story) {
   return { type: REQUEST_STORY, story }
 }
 
-export function receiveStory (story, json) {
+export function receiveStory (story, text) {
   return {
     type: RECEIVE_STORY,
-    story,
-    text: JSON.parse(),
+    source: story,
+    text: text,
     dateTimeIndex: Date.now()
   }
 }
 
 
-function fetchStory(story){
+export function fetchStory(story){
   return dispatch => {
     dispatch(requestStory(story))
-      return fetch("")
+      return fetch(story)
+          .then(response => response.text())
+          .then(text => dispatch(receiveStory(story,text)))
   }
 }
 

@@ -31,10 +31,12 @@ function comments(state = initialState.comments, action){
         }
       ];
     case REMOVE_COMMENT:
-      if (typeof state === undefined){
-        return state
+      if (typeof state !== undefined){
+        let cfm = window.confirm("You are about to delete a post... Are you sure?");
+        if(cfm)
+          return state.filter((comment,index) => index !== action.id);
       }
-      return state.filter((comment,index) => index !== action.index);
+      return state;
     default:
       return state
   }

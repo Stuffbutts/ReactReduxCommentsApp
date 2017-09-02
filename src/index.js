@@ -5,9 +5,6 @@ import { createLogger } from 'redux-logger';
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
 
-
-
-
 import App from './Components/App';
 import commentApp from './Reducers/ApplicationReducers'
 import {

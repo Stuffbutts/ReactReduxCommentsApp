@@ -31,8 +31,8 @@ export function addComment(text, dateTimeIndex) {
     }
 }
 
-export function removeComment(index) {
-    return {type: REMOVE_COMMENT, index}
+export function removeComment(id) {
+    return {type: REMOVE_COMMENT, id}
 }
 
 export function requestStory(story) {

@@ -10,6 +10,7 @@ import {
   removeComment
 } from './Actions/Actions'
 
+
 let store = createStore(commentApp)
 
 console.log(store.getState());

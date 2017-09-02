@@ -1,3 +1,4 @@
+import fetch from 'isomorphic-fetch';
 /**
  * Action types
  */
@@ -29,3 +30,16 @@ export function receiveStory (story, json) {
     dateTimeIndex: Date.now()
   }
 }
+
+
+function fetchStory(story){
+  return dispatch => {
+    dispatch(requestStory(story))
+      return fetch("")
+  }
+}
+
+
+
+
+

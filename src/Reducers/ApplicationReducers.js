@@ -15,13 +15,7 @@ const initialState = {
       source: ""
     }
   ,
-  comments: [
-    {
-      id: 0,
-      text: "First!",
-      dateTimeIndex: Date.now()
-    }
-  ]
+  comments: []
 };
 
 function comments(state = initialState.comments, action){
@@ -30,21 +24,19 @@ function comments(state = initialState.comments, action){
       return [
         ...state,
         {
-          id: state.length > 0 ? state[state.length - 1].id + 1 : 0,
+          id: state.reduce((maxId, comment)=>Math.max(comment.id, maxId), -1) + 1,
           text: action.text,
-          dateTimeIndex: action.dateTimeIndex
+          dateTimeIndex: action.dateTimeIndex,
+          dateTimeFormatted: action.dateTimeFormatted
         }
-      ]
+      ];
     case REMOVE_COMMENT:
       if (typeof state === undefined){
         return state
       }
-      return [
-        ...state.slice(0,action.index)
-      ]      
+      return state.filter((comment,index) => index !== action.index);
     default:
       return state
-      
   }
 }
 

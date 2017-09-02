@@ -33,10 +33,13 @@ let unsub = store.subscribe(() =>
   console.log(store.getState())
 );
 
-store.dispatch(addComment('A comment.', Date.now()))
-store.dispatch(removeComment(1))
-store.dispatch(removeComment(0))
-store.dispatch(addComment('Another comment.', Date.now()))
+store.dispatch(addComment('A comment.', Date.now()));
+// store.dispatch(removeComment(1));
+// store.dispatch(removeComment(0));
+setTimeout(() => store.dispatch(addComment('DIDN\'T SEE ME COMING DID YA.', Date.now())),15000);
+
+
+// store.dispatch(removeComment(0));
 
 store.dispatch(fetchStory("https://baconipsum.com/api/?type=all-meat&paras=3&start-with-lorem=1&format=html"))
     .then(() => console.log(store.getState()));

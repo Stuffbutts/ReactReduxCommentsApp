@@ -3,6 +3,7 @@
   "description": null,
   "version": "0.0.73",
   "dependencies": {
+    "aphrodite": "^1.2.3",
     "babel-polyfill": "^6.26.0",
     "deep-freeze": "0.0.1",
     "expect": "1.20.2",

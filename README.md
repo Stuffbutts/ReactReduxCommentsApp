@@ -1,5 +1,11 @@
 # Comments App
 
+- - -
+
+[![Build Status](https://travis-ci.org/Stuffbutts/ReactReduxCommentsApp.svg?branch=master)](https://travis-ci.org/Stuffbutts/ReactReduxCommentsApp)
+
+- - -
+
 Super duper simple react + redux app.
 
 ## What does it do?

@@ -8,6 +8,10 @@
 
 Super duper simple react + redux app.
 
+hosted at:
+ - [https://stuffbutts.github.io/](https://stuffbutts.github.io/) 
+ - [http://commentapp.stuffin.me/](http://commentapp.stuffin.me/)
+
 ## What does it do?
 
 Loads a few paragraphs of [Bacon Ipsum](https://baconipsum.com/json-api/) through their api and lets the user add 

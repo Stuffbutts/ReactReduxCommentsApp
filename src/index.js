@@ -5,9 +5,6 @@ import { createLogger } from 'redux-logger';
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
 
-
-
-
 import App from './Components/App';
 import commentApp from './Reducers/ApplicationReducers'
 import {
@@ -40,7 +37,7 @@ setTimeout(() => store.dispatch(addComment('DIDN\'T SEE ME COMING DID YA.', Date
 
 
 // store.dispatch(removeComment(0));
-
+// TODO: Move this in with reducers (url should be part of original state)
 store.dispatch(fetchStory("https://baconipsum.com/api/?type=all-meat&paras=3&start-with-lorem=1&format=html"))
     .then(() => console.log(store.getState()));
 

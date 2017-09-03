@@ -1,6 +1,16 @@
 # Comments App
 
+- - -
+
+[![Build Status](https://travis-ci.org/Stuffbutts/ReactReduxCommentsApp.svg?branch=dev)](https://travis-ci.org/Stuffbutts/ReactReduxCommentsApp)
+
+- - -
+
 Super duper simple react + redux app.
+
+hosted at:
+ - [https://stuffbutts.github.io/](https://stuffbutts.github.io/) 
+ - [http://commentapp.stuffin.me/](http://commentapp.stuffin.me/)
 
 ## What does it do?
 

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="5cc4ad8a-8c8a-4931-b66f-4f19bd584db6" name="commentapp.stuffin.me" url="http://commentapp.stuffin.me">
+        <fileTransfer host="stuffin.me" port="2222" privateKey="C:\Users\shadi\.ssh\id_rsa" rootFolder="/home1/stuffbutt/commentapp" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="2222" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -1,5 +1,6 @@
 import { connect } from 'react-redux'
 import CommentList from '../Components/CommentList'
+import {removeComment} from '../Actions/Actions';
 
 const getComments = (comments) => (
     comments
@@ -11,6 +12,14 @@ const mapStateToProps = state => {
     }
 };
 
-const CommentListContainer = connect(mapStateToProps)(CommentList);
+const mapDispatchToProps = dispatch => {
+  return {
+      onClickHandler: id => {
+          dispatch(removeComment(id))
+      }
+  }
+};
+
+const CommentListContainer = connect(mapStateToProps,mapDispatchToProps)(CommentList);
 
 export default CommentListContainer

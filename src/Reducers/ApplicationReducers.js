@@ -2,8 +2,9 @@ import { combineReducers } from 'redux'
 import {
   ADD_COMMENT,
   REMOVE_COMMENT,
-  REQUEST_STORY,
-  RECEIVE_STORY
+  FETCH_STORY_REQUEST,
+  FETCH_STORY_SUCCESS,
+  FETCH_STORY_FAILURE
 } from '../Actions/Actions'
 
 
@@ -31,10 +32,12 @@ function comments(state = initialState.comments, action){
         }
       ];
     case REMOVE_COMMENT:
-      if (typeof state === undefined){
-        return state
+      if (typeof state !== undefined){
+        let cfm = window.confirm("You are about to delete a post... Are you sure?");
+        if(cfm)
+          return state.filter((comment,index) => index !== action.id);
       }
-      return state.filter((comment,index) => index !== action.index);
+      return state;
     default:
       return state
   }
@@ -49,16 +52,22 @@ function story(
   action
 ){
   switch (action.type){
-    case REQUEST_STORY:
+    case FETCH_STORY_REQUEST:
       return Object.assign({}, state, {
         isFetching: true,
-        source: action.source
+        source: action.story
       });
-    case RECEIVE_STORY:
+    case FETCH_STORY_SUCCESS:
       return Object.assign({}, state, {
         isFetching: false,
         text: action.text,
-        dateTimeIndex: action.dateTimeIndex
+        source: action.story
+      });
+    case FETCH_STORY_FAILURE:
+      return Object.assign({}, state, {
+        isFetching: false,
+        text: "Something went wrong on our end... so sorry :(",
+        source: action.story
       });
     default:
       return state

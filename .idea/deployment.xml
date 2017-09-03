@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="commentapp.stuffin.me">
+    <serverData>
+      <paths name="commentapp.stuffin.me">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$/build" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath path="/.htaccess" />
+            <excludedPath path="/cgi-bin" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

@@ -2,7 +2,7 @@
 
 - - -
 
-[![Build Status](https://travis-ci.org/Stuffbutts/ReactReduxCommentsApp.svg?branch=master)](https://travis-ci.org/Stuffbutts/ReactReduxCommentsApp)
+[![Build Status](https://travis-ci.org/Stuffbutts/ReactReduxCommentsApp.svg?branch=dev)](https://travis-ci.org/Stuffbutts/ReactReduxCommentsApp)
 
 - - -
 
